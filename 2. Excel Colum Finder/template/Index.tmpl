@@ -1,0 +1,21 @@
+{{ define "Index" }}
+  {{ template "Header" }}
+      <form method="POST" action="">
+      <input type="text" name="start" placeholder="Column to start" />
+      <input type="text" name="rows" placeholder="No of Rows" />
+      <input type="text" name="columns" placeholder="No of Columns" />
+      <input type="submit" value="Submit" />
+    </form>
+    <h2> Excel Column Finder </h2>
+    <table>
+		<tr>
+			{{range $i, $a := .Column}}
+				{{if(((inc $i .ColNum) eq 0) and ($i ne 0))}}
+					</tr><tr>
+				{{end}}
+				<td>{{ $a }}</td>
+			{{ end }}		
+		</tr>  
+	</table> 
+  {{ template "Footer" }}
+{{ end }}

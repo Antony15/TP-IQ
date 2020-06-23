@@ -1,0 +1,14 @@
+{{ define "Index" }}
+  {{ template "Header" }}
+      <form method="POST" action="">
+      <label> URL </label><input type="text" name="url" />
+      <input type="submit" value="Submit" />
+    </form>
+    <h2> Word Counter </h2>
+    <div class="counterdiv">
+		{{ range . }}
+				<span>{{ .Name }} :- {{ .Count }}</span>
+		{{ end }}		
+	</div>
+  {{ template "Footer" }}
+{{ end }}
