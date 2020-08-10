@@ -1,3 +1,3 @@
-# TalentPro-Interview-Questions
+# TP-IQ
 
-These are the tasks assigned by TalentPro company when attending their interview.
+Some of the sample golang examples.
